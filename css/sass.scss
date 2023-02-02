@@ -1,0 +1,67 @@
+body {
+  background-color: black;
+  height: 100vh;
+}
+
+/*///////////////////////    Container       ////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////*/
+.container {
+  display: grid;
+  grid-template-columns: minmax(100px, 1fr) 6fr;
+  grid-template-rows: 1fr 5fr;
+  height: 100%;
+}
+
+/*///////////////////////    Header      ////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////*/
+
+.header {
+  background-color: white;
+}
+
+.header__display {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: repeat(2, minmax(120px, 1fr));
+}
+
+/*///////////////////////    Dashboard       ////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////*/
+
+.dashboard {
+  grid-row: span 2;
+  background-color: #1992d4;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8.3% 36%;
+}
+
+.dashboard__element {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+}
+
+@media (max-width: 1099px) {
+  i {
+    display: none;
+  }
+}
+
+/*///////////////////////    Projects       ////////////////////////////////////// 
+///////////////////////////////////////////////////////////////////////*/
+
+.projects {
+  background-color: gray;
+  display: grid;
+  grid-template-columns: 3fr minmax(75px, 1fr);
+  grid-template-rows: 0.1fr;
+  gap: 15px;
+}
+
+.project__post {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  margin-left: 15px;
+}
